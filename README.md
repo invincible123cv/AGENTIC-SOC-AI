@@ -19,14 +19,14 @@ from google import genai
 </p>
 <br>
 
-```scss
+```python
 gemini_client = genai.Client(api_key="YOUR API KEY")
 ```
 <br>
 <p>Initialize a variale for user input</p>
 <br>
 
-```scss
+```python
 prompt = input("Your question: ")
 ```
 <br>
@@ -35,21 +35,21 @@ prompt = input("Your question: ")
 <p>Output the response</p>
 <br>
 
-```scss
+```python
 print(response.text)
 ```
 <br>
 <p>So the overall process is</p>
 <br>
 
-```scss
+```python
 User input → Gemini API → Model processes → Returns response object → Extract text → Print
 ```
 <br>
 <p>Complete code section:</p>
 <br>
 
-```scss
+```python
 from google import genai
 
 gemini_client = genai.Client(api_key='YOUR_API_KEY')
@@ -68,7 +68,7 @@ print(response.text)
 <p>Further more if we want to configure the agent's behavior and identity we can add</p>
 <br>
 
-```scss
+```python
 from google import genai
 
 gemini_client = genai.Client(api_key='YOUR_API_KEY')
@@ -92,7 +92,7 @@ print(response.text)
 <p>In order to configure the response to be returned in JSON format, just simply add the following in the config in the response variable</p>
 <br>
 
-```scss
+```python
 config= types.GenerateContentConfig(
         system_instruction=system_identity,
         response_mime_type="application/json"
